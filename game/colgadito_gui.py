@@ -175,7 +175,7 @@ class Game(spyral.Scene):
         pygame.mixer.music.play(-1)
 
         spyral.event.register("input.keyboard.down.*", self.procesar_tecla)
-        spyral.event.register("system.quit", sys.exit)
+        spyral.event.register("system.quit", spyral.director.quit)
 
     def setup(self):
         frase = frases[random.randint(0, len(frases)-1)]
